@@ -16,3 +16,5 @@
 
 #### 官方给出的Baseline只尝试了keypoint本身信息，没有考虑到bone，motion这些信息
 针对这个问题，我们充分考虑了bone，motion以及joint-bone-motion这种更强的表示能力的数据
+
+### 训练命令
