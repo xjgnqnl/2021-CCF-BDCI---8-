@@ -27,4 +27,25 @@ python main.py -c configs/recognition/stgcn/stgcn_fsd_concate.yaml
 
 python main.py -c configs/recognition/stgcn/stgcn_fsd_motion.yaml
 
+#### AGCN模型
+python main.py -c configs/recognition/agcn/agcn_fsd_joint.yaml
 
+python main.py -c configs/recognition/agcn/agcn_fsd_bone.yaml
+
+python main.py -c configs/recognition/agcn/agcn_fsd_concate.yaml
+
+python main.py -c configs/recognition/agcn/agcn_fsd_motion.yaml
+
+以上命令分别可以得到STGCN，AGCN模型分别在joint，bone，concate-joint-bone-motion，motion四种数据模态上面的结果，模型
+文件分别存储在output文件夹中
+
+### 二.测试命令
+#### STGCN模型
+python main.py --test -c configs/recognition/stgcn/stgcn_fsd_joint.yaml -w output/STGCN/STGCN_epoch_00090.pdparams
+
+······
+
+#### AGCN模型
+······
+
+每个模型测试完成，都会在当前目录生成一个score.pkl的分数矩阵
