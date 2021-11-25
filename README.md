@@ -40,7 +40,7 @@ python main.py -c configs/recognition/agcn/agcn_fsd_motion.yaml
 以上命令分别可以得到STGCN，AGCN模型分别在joint，bone，concate-joint-bone-motion，motion四种数据模态上面的结果，模型
 文件分别存储在output文件夹中
 
-### 二.测试命令
+### 三.测试命令
 #### STGCN模型
 python main.py --test -c configs/recognition/stgcn/stgcn_fsd_joint.yaml -w output/STGCN/STGCN_epoch_00090.pdparams
 
@@ -52,7 +52,11 @@ python main.py --test -c configs/recognition/stgcn/stgcn_fsd_joint.yaml -w outpu
 每个模型测试完成，都会在当前目录生成一个score.pkl的分数矩阵,将分数矩阵都放到score_test_b文件夹中
 
 
-## 一.引进Posec3d模型（one-hot形式）
+## 二.引进Posec3d模型（one-hot形式）
 具体可参考posec3d的工程：https://github.com/open-mmlab/mmaction2/tree/master/configs/skeleton/posec3d
 将原始数据，清洗后的数据，label_smooth约束下得到3个模型以及score.pkl，然后分别放到score_test_b中，作为最后的预测结果
+
+## 三.将AGCN,STGCN,Posec3d的多个模型ensemble
+#### ensemble命令
+python ensemble.py , 然后会在当前目录的submit文件夹下面，得到最终的结果文件，在b榜评测中达到65.93%，第8名
 
