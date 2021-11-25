@@ -1,0 +1,38 @@
+I1005 20:24:27.249872 30412 gen_comm_id_helper.cc:181] Server listening on: 127.0.0.1:32871 successful.
+I1005 20:24:27.297324 30412 nccl_context.cc:74] init nccl context nranks: 2 local rank: 1 gpu id: 1 ring id: 0
+W1005 20:24:28.101145 30412 device_context.cc:404] Please NOTE: device: 1, GPU Compute Capability: 8.6, Driver API Version: 11.1, Runtime API Version: 11.0
+W1005 20:24:28.248739 30412 device_context.cc:422] device: 1, cuDNN Version: 8.1.
+Traceback (most recent call last):
+  File "main.py", line 87, in <module>
+    main()
+  File "main.py", line 83, in main
+    amp=args.amp)
+  File "/home/xingkai/CCF-BDCI/Baseline/PaddleVideo/paddlevideo/tasks/train.py", line 95, in train_model
+    train_dataset = build_dataset((cfg.DATASET.train, cfg.PIPELINE.train))
+  File "/home/xingkai/CCF-BDCI/Baseline/PaddleVideo/paddlevideo/loader/builder.py", line 47, in build_dataset
+    dataset = build(cfg_dataset, DATASETS, key="format")
+  File "/home/xingkai/CCF-BDCI/Baseline/PaddleVideo/paddlevideo/utils/build_utils.py", line 35, in build
+    return obj_cls(**cfg_copy)
+  File "/home/xingkai/CCF-BDCI/Baseline/PaddleVideo/paddlevideo/loader/dataset/skeleton.py", line 41, in __init__
+    super().__init__(file_path, pipeline, test_mode=test_mode)
+  File "/home/xingkai/CCF-BDCI/Baseline/PaddleVideo/paddlevideo/loader/dataset/base.py", line 48, in __init__
+    self.info = self.load_file()
+  File "/home/xingkai/CCF-BDCI/Baseline/PaddleVideo/paddlevideo/loader/dataset/skeleton.py", line 46, in load_file
+    self.data = np.load(self.file_path)
+  File "/home/xingkai/anaconda3/envs/CCF/lib/python3.6/site-packages/numpy/lib/npyio.py", line 416, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'train_data.npy'
+I1005 20:30:55.159075 32578 gen_comm_id_helper.cc:181] Server listening on: 127.0.0.1:39711 successful.
+I1005 20:30:55.551748 32578 nccl_context.cc:74] init nccl context nranks: 2 local rank: 1 gpu id: 1 ring id: 0
+W1005 20:30:56.437242 32578 device_context.cc:404] Please NOTE: device: 1, GPU Compute Capability: 8.6, Driver API Version: 11.1, Runtime API Version: 11.0
+W1005 20:30:56.440842 32578 device_context.cc:422] device: 1, cuDNN Version: 8.1.
+/home/xingkai/anaconda3/envs/CCF/lib/python3.6/site-packages/paddle/nn/layer/norm.py:641: UserWarning: When training, we now always track global mean and variance.
+  "When training, we now always track global mean and variance.")
+I1005 20:59:13.677453  6714 gen_comm_id_helper.cc:181] Server listening on: 127.0.0.1:43123 successful.
+I1005 20:59:13.995110  6714 nccl_context.cc:74] init nccl context nranks: 2 local rank: 1 gpu id: 1 ring id: 0
+W1005 20:59:14.917219  6714 device_context.cc:404] Please NOTE: device: 1, GPU Compute Capability: 8.6, Driver API Version: 11.1, Runtime API Version: 11.0
+W1005 20:59:14.923683  6714 device_context.cc:422] device: 1, cuDNN Version: 8.1.
+I1005 21:07:03.634936  8983 gen_comm_id_helper.cc:181] Server listening on: 127.0.0.1:36275 successful.
+I1005 21:07:03.658991  8983 nccl_context.cc:74] init nccl context nranks: 2 local rank: 1 gpu id: 1 ring id: 0
+W1005 21:07:04.495069  8983 device_context.cc:404] Please NOTE: device: 1, GPU Compute Capability: 8.6, Driver API Version: 11.1, Runtime API Version: 11.0
+W1005 21:07:04.504217  8983 device_context.cc:422] device: 1, cuDNN Version: 8.1.
