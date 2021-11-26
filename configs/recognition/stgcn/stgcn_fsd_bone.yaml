@@ -14,12 +14,12 @@ DATASET: #DATASET field
     test_num_workers: 0
     train:
         format: "SkeletonDataset" #Mandatory, indicate the type of dataset, associate to the 'paddlevidel/loader/dateset'
-        file_path: "/data1/xingkai/FSD-30/train_data.npy" #Mandatory, train data index file path
-        label_path: "/data1/xingkai/FSD-30/data_preprocess/train_label.npy"
+        file_path: "./data/data118515/train_data.npy" #Mandatory, train data index file path
+        label_path: "./data/data118515/train_label.npy"
     test:
         format: "SkeletonDataset" #Mandatory, indicate the type of dataset, associate to the 'paddlevidel/loader/dateset'
         #file_path: "/data1/xingkai/FSD-30/test_A_data.npy" #Mandatory, valid data index file path
-        file_path: "/data1/xingkai/FSD-30/test_B_data.npy" #Mandatory, valid data index file path
+        file_path: "./data/data118515/test_B_data.npy" #Mandatory, valid data index file path
         test_mode: True
 
 PIPELINE: #PIPELINE field
