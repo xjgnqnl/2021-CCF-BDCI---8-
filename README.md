@@ -58,5 +58,5 @@ python main.py --test -c configs/recognition/stgcn/stgcn_fsd_joint.yaml -w outpu
 
 ## 三.将AGCN,STGCN,Posec3d的多个模型ensemble
 #### ensemble命令
-python ensemble.py , 然后会在当前目录的submit文件夹下面，得到最终的结果文件，在b榜评测中达到65.93%，第8名
+python ensemble.py , 然后会在当前目录的submit文件夹下面，得到最终的结果文件submission.csv，在b榜评测中达到65.93%,甚至更高，因为当时b榜提交时候，我们的一个模型没有完全训练完毕，所以我们的结果应该比65.93%要更高
 
